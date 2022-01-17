@@ -40,7 +40,7 @@ btn.addEventListener('click', function () {
         newV = createWords();
         randomV = jumbleWord(newV.split(""));
         console.log(randomV);
-        inital.innerHTML = 'Sajauc vārdu \'' + randomV + '\'';
+        inital.innerHTML = 'Sajaukts vārds \'' + randomV + '\'';
 
     } else {
 
