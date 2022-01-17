@@ -35,7 +35,7 @@ btn.addEventListener('click', function () {
         game = true;
         inital.style.color = 'darkred';
 
-        btn.textContent = 'Guess Word';
+        btn.textContent = 'Uzmini vārdu!';
         guess.classList.toggle('hidden');
         newV = createWords();
         randomV = jumbleWord(newV.split(""));
@@ -48,7 +48,7 @@ btn.addEventListener('click', function () {
         if (inputWord === newV) {
             console.log('correct');
             game = false;
-            inital.innerHTML = `Awesome!It's correct.\n
+            inital.innerHTML = `Tas ir pareizi!.\n
                           It is ${newV}`;
             inital.style.color = 'darkviolet';
             sc += 5;
@@ -59,9 +59,9 @@ btn.addEventListener('click', function () {
 
         } else {
             console.log('incorrect');
-            inital.innerHTML = `Better luck next time.Try Again! '${randomV}'`;
+            inital.innerHTML = `Mēģini vēlreiz! '${randomV}'`;
             inital.style.color = 'red';
-            btn.innerHTML = 'Again';
+            btn.innerHTML = 'Atkārtot';
             guess.value = "";
             guess.classList.toggle('hidden');
         }
