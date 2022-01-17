@@ -8,7 +8,7 @@ let game = false;
 let newV = "";
 let randomV = "";
 
-const words = ['dators', 'dati', 'portatīvais', 'zinātne', 'monitors', 'peler', 'tastatūra', 'printeris', 'HTML', 'spēle','diks','serveris','privāts','teksts','nekorekts','pietiekams','kalendārs','mūris','logs','windows','skola','kanāls','vadi','sloti','RAM','ROM','USB'];
+const words = ['dators', 'dati', 'portatīvais', 'zinātne', 'monitors', 'pele', 'tastatūra', 'printeris', 'HTML', 'spēle','disks','serveris','privāts','teksts','nekorekts','pietiekams','kalendārs','mūris','logs','windows','skola','kanāls','vadi','sloti','RAM','ROM','USB'];
 
 const createWords = () => {
     let number = Math.floor(Math.random() * words.length);
@@ -48,13 +48,13 @@ btn.addEventListener('click', function () {
         if (inputWord === newV) {
             console.log('correct');
             game = false;
-            inital.innerHTML = `Tas ir pareizi!.\n
-                          It is ${newV}`;
+            inital.innerHTML = `Tas ir pareizi!\n
+                          Tavs vārds bija ${newV}`;
             inital.style.color = 'darkviolet';
             sc += 5;
             score.innerHTML = sc;
             guess.classList.toggle('hidden');
-            btn.innerHTML = 'start again';
+            btn.innerHTML = 'Turpināt minēt';
             guess.value = "";
 
         } else {
