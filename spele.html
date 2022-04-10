@@ -8,7 +8,13 @@
     <title>StartIT vardu spele</title>
 </head>
 <body>
-    
+    <header>
+        <h1>
+            
+            Vārdu spēle - jaukt burtus
+           
+        </h1>
+    </header>
     <div class="wrapper">
         
         <div class="header">
@@ -45,26 +51,17 @@
         <div class="content">
             <h3 class="virsraksts">Sveiks </h3>
 
-            <div class="game">
-                <div class="block" id="L0" onclick="veiktGajienu('L0')">
-                    <div>😃</div>
+            <section>
+                <div class="GameArea">
+                    <div class='score'>Punkti
+                        <h2 class='score-1'>23</h2>
+                    </div>
+                    <div class="start">Vai esi gatavs! </div>
+                    <input type="text" class="hidden">
+                    <button class="btn">Sāc spēli!</button>
                 </div>
-                <div class="block" id="L1" onclick="veiktGajienu('L1')">
-                    <div>😎</div>
-                </div>
-                <div class="block" id="L2" onclick="veiktGajienu('L2')">
-                    <div>🥳</div>
-                </div>
-                <div class="block" id="L3" onclick="veiktGajienu('L3')">
-                    <div>😃</div>
-                </div>
-                <div class="block" id="L4" onclick="veiktGajienu('L4')">
-                    <div>🥳</div>
-                </div>
-                <div class="block" id="L5" onclick="veiktGajienu('L5')">
-                    <div>😎</div>
-                </div>
-            </div>
+        
+            </section>
         </div>
 
     </div><!--beidzas wrapper-->
