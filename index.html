@@ -39,7 +39,20 @@
             </ul>
     </div>
     <div class="content">
-            <p>Noteikumu teksts</p>
+        <h3 class="virsraksts">Noteikumu teksts</h3>
+
+        Vārds: <input id="vards" />
+        <br />
+        Vecums: <input id="vecums" />
+        <br />
+        Reģions:
+        <select id="regions">
+            <option value="Vidzeme">Vidzeme</option>
+            <option value="Latgale">Latgale</option>
+            <option value="Kurzeme">Kurzeme</option>
+        </select>
+
+        <button onclick="saktSpeli()">Sākt</button>
     
             
     </div>
@@ -55,7 +68,26 @@
         </div>
 
     </section>
-    <script src="java.js"></script>
+<script src="java.js">
+    function saktSpeli() 
+    {
+        let vards   = document.querySelector('#vards').value
+        let vecums  = document.querySelector('#vecums').value
+        let regions = document.querySelector('#regions').value
+        
+        console.log(regions)
+
+        if( vards=='' )
+        {
+            alert('Ievadi vārdu!')
+        }
+        else
+        {
+            window.location='spele.html#'+vards+','+vecums+','+regions
+        }
+
+    }//beidzas saktSpeli()
+</script>
  
 </body>
 </html>
