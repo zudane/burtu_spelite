@@ -4,9 +4,12 @@ const btn = document.querySelector('.btn');
 let score = document.querySelector('.score-1');
 score.innerHTML = 0;
 let sc = 0;
+let atlLaiks= 180;
+let laikaAtskaite;
 let game = false;
 let newV = "";
 let randomV = "";
+
 
 const words = ['dators', 'dati', 'portatīvais', 'zinātne', 'monitors', 'pele', 'tastatūra', 'printeris', 'HTML', 'spēle','disks','serveris','privāts','teksts','nekorekts','pietiekams','kalendārs','mūris','logs','windows','skola','kanāls','vadi','sloti','RAM','ROM','USB'];
 
@@ -40,7 +43,7 @@ btn.addEventListener('click', function () {
         newV = createWords();
         randomV = jumbleWord(newV.split(""));
         console.log(randomV);
-        inital.innerHTML = 'Sajaukts vārds \'' + randomV + '\'';
+        inital.innerHTML = 'Sajauktais vārds \'' + randomV + '\'';
 
     } else {
 
@@ -67,4 +70,12 @@ btn.addEventListener('click', function () {
         }
 
     }
-})
+}
+function LAIKS(){
+    let min = Math.floor(atlLaiks / 60);
+      let sec = atlLaiks - (min * 60);
+    if (sec < 10) {
+          sec = "0" + sec;
+      }
+    laiks.innerHTML = min.toString() + ":" + sec;
+  }
