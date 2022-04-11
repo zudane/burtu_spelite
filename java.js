@@ -70,7 +70,7 @@ btn.addEventListener('click', function () {
         }
 
     }
-}
+
 function LAIKS(){
     let min = Math.floor(atlLaiks / 60);
       let sec = atlLaiks - (min * 60);
@@ -79,3 +79,4 @@ function LAIKS(){
       }
     laiks.innerHTML = min.toString() + ":" + sec;
   }
+}
